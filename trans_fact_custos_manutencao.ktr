@@ -1,0 +1,1023 @@
+<transformation>
+  <info>
+    <name>trans_fact_custos_manutencao</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2014&#x2f;05&#x2f;20 16&#x3a;18&#x3a;22.073</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2015&#x2f;02&#x2f;02 11&#x3a;34&#x3a;17.668</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>AgileBI</name>
+    <server>localhost</server>
+    <type>MONETDB</type>
+    <access>Native</access>
+    <database>pentaho-instaview</database>
+    <port>50000</port>
+    <username>monetdb</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb14a17edb86abd8</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <read_only>true</read_only>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_INFOBRIGHT.characterEncoding</code><attribute>UTF-8</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>50000</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Datawarehouse</name>
+    <server>&#x24;&#x7b;datawarehouse&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;database_dw&#x7d;</database>
+    <port>&#x24;&#x7b;porta_dw&#x7d;</port>
+    <username>&#x24;&#x7b;usuario_dw&#x7d;</username>
+    <password>&#x24;&#x7b;senha_dw&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;porta_dw&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>frota</name>
+    <server>&#x24;&#x7b;servitoriabd&#x7d;</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;database_frota&#x7d;</database>
+    <port>&#x24;&#x7b;porta_frota&#x7d;</port>
+    <username>&#x24;&#x7b;usuario_frota&#x7d;</username>
+    <password>&#x24;&#x7b;senha_vitoria&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;porta_frota&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>mafro</name>
+    <server>172.17.10.12</server>
+    <type>FIREBIRD</type>
+    <access>Native</access>
+    <database>d&#x3a;&#x5c;Future&#x5c;Vitoria&#x5c;Dados&#x5c;MANUTENCAO.FDB</database>
+    <port>3050</port>
+    <username>SYSDBA</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce108fcbfa82</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3050</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>ordemservico</name>
+    <server>172.17.10.4</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>ordemservico</database>
+    <port>5432</port>
+    <username>bi_consulta</username>
+    <password>Encrypted 2be98afc86aa78281a50daf78d184a6ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>vistoria</name>
+    <server>172.17.10.4</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>vistoria</database>
+    <port>5432</port>
+    <username>bi_consulta</username>
+    <password>Encrypted 2be98afc86aa78281a50daf78d184a6ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Table input</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>busca carro</from><to>busca pe&#xe7;a</to><enabled>Y</enabled> </hop>
+  <hop> <from>busca pe&#xe7;a</from><to>remove hh&#x3a;mm da data</to><enabled>Y</enabled> </hop>
+  <hop> <from>remove hh&#x3a;mm da data</from><to>busca data</to><enabled>Y</enabled> </hop>
+  <hop> <from>busca data</from><to>calcula valor total</to><enabled>Y</enabled> </hop>
+  <hop> <from>calcula valor total</from><to>Select values 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>If field value is null 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null 2</from><to>Formula</to><enabled>Y</enabled> </hop>
+  <hop> <from>remove matex</from><to>busca carro</to><enabled>Y</enabled> </hop>
+  <hop> <from>Value Mapper</from><to>remove matex</to><enabled>Y</enabled> </hop>
+  <hop> <from>Formula</from><to>Select values 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 3</from><to>Value Mapper</to><enabled>Y</enabled> </hop>
+  <hop> <from>filtra datas</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2</from><to>filtra datas</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Formula</name>
+    <type>Formula</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <formula><field_name>DIRCUSTO</field_name>
+<formula_string>IF&#x28;AND&#x28;&#x5b;CAR_COD&#x5d;&#x3d;0&#x3b;&#x5b;CENTROCUSTO&#x5d;&#x3c;&#x3e;0&#x29;&#x3b;&#x5b;CENTROCUSTO&#x5d;&#x3b;&#x5b;CAR_COD&#x5d;&#x29;</formula_string>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>369</xloc>
+      <yloc>95</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>If field value is null 2</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>centroCusto</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>car_cod</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>279</xloc>
+      <yloc>94</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>cod_ite</name>
+        <rename>cod_ite</rename>
+        <type>Integer</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>dat_saida</name>
+        <rename>dat_saida</rename>
+        <type>Date</type>
+        <length>3</length>
+        <precision>-2</precision>
+        <conversion_mask>dd&#x2f;MM&#x2f;yyyy</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>qtd_saida</name>
+        <rename>qtd_saida</rename>
+        <type>Number</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask>0.0000</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>val_ite</name>
+        <rename>val_ite</rename>
+        <type>Number</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask>0.0000</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>pt_apoio</name>
+        <rename>pt_apoio</rename>
+        <type>Integer</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>car_cod</name>
+        <rename>car_cod</rename>
+        <type>Integer</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>km_dia</name>
+        <rename>km_dia</rename>
+        <type>Integer</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>centroCusto</name>
+        <rename>centroCusto</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>160</xloc>
+      <yloc>97</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>cod_ite</name>
+      </remove>      <remove>        <name>dat_saida</name>
+      </remove>      <remove>        <name>car_cod</name>
+      </remove>      <remove>        <name>centroCusto</name>
+      </remove>      <remove>        <name>DIRCUSTO</name>
+      </remove>      <remove>        <name>data</name>
+      </remove>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>563</xloc>
+      <yloc>186</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>cod_ite</name>
+        <rename>cod_ite</rename>
+        <type>Integer</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>dat_saida</name>
+        <rename>dat_saida</rename>
+        <type>Date</type>
+        <length>3</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>qtd_saida</name>
+        <rename>qtd_saida</rename>
+        <type>Number</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>val_ite</name>
+        <rename>val_ite</rename>
+        <type>Number</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>pt_apoio</name>
+        <rename>pt_apoio</rename>
+        <type>Integer</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>car_cod</name>
+        <rename>car_cod</rename>
+        <type>Integer</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>centroCusto</name>
+        <rename>centroCusto</rename>
+        <type>Integer</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>km_dia</name>
+        <rename>km_dia</rename>
+        <type>Integer</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>DIRCUSTO</name>
+        <rename>DIRCUSTO</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>477</xloc>
+      <yloc>92</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>frota</connection>
+    <sql>-- Requisi&#xe7;&#xf5;es di&#xe1;rias&#xd;&#xa;&#x28;&#xd;&#xa;select&#xd;&#xa;  t_ite_req.cd_ite as cod_ite,&#xd;&#xa;  t_ite_req.dt_ite_req_atn as dat_saida,&#xd;&#xa;  t_ite_req.qt_ite_req_atn as qtd_saida,&#xd;&#xa;   &#x28;select top 1&#xd;&#xa;     t_cus_ite_dia.vl_cnt&#xd;&#xa;     from t_cus_ite_dia&#xd;&#xa;     where t_cus_ite_dia.dt_mov &#x3c;&#x3d; t_ite_req.dt_ite_req_atn and t_cus_ite_dia.cd_ite &#x3d; t_ite_req.cd_ite&#xd;&#xa;     order by t_cus_ite_dia.dt_mov desc&#xd;&#xa;     &#x29;  as val_ite,&#xd;&#xa;  t_ite_req.cd_pnt_apo as pt_apoio,&#xd;&#xa;  t_vei.numero as car_cod,&#xd;&#xa;  t_ite_req.cd_crt_cst as centroCusto,&#xd;&#xa;   0 as km_dia&#xd;&#xa;from t_ite_req&#xd;&#xa;left join t_vei on &#x28;t_ite_req.nr_vei &#x3d; t_vei.nr_vei&#x29;&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;union all&#xd;&#xa;&#xd;&#xa;-- Complemento de &#xf3;leo&#xd;&#xa;&#x28;&#xd;&#xa;select &#xd;&#xa; t_cmp_oil_lub.cd_ite as cod_ite,&#xd;&#xa; t_cmp_oil_lub_exe.dt_cmp_oil_lub as dat_saida,&#xd;&#xa; t_cmp_oil_lub_exe.qt_cmp_oil_lub as qtd_saida,&#xd;&#xa; &#x28;select top 1&#xd;&#xa;t_cus_ite_dia.vl_cnt&#xd;&#xa;from t_cus_ite_dia&#xd;&#xa;where t_cus_ite_dia.dt_mov &#x3c;&#x3d; t_cmp_oil_lub_exe.dt_cmp_oil_lub and t_cus_ite_dia.cd_ite &#x3d; t_cmp_oil_lub.cd_ite&#xd;&#xa;order by t_cus_ite_dia.dt_mov desc&#xd;&#xa;&#x29;  as val_ite,&#xd;&#xa; t_cmp_oil_lub_exe.cd_pnt_apo as pt_apoio,&#xd;&#xa; t_vei.numero as car_cod,&#xd;&#xa; 0 as centroCusto,&#xd;&#xa; 0 as km_dia&#xd;&#xa;from t_cmp_oil_lub&#xd;&#xa;inner join t_cmp_oil_lub_exe &#xd;&#xa;  on &#x28;t_cmp_oil_lub.cd_cmp_oil_lub &#x3d; t_cmp_oil_lub_exe.cd_cmp_oil_lub&#x29; &#xd;&#xa;inner join t_vei &#xd;&#xa;  on &#x28;t_cmp_oil_lub_exe.nr_vei&#x3d;t_vei.nr_vei&#x29;&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;union all&#xd;&#xa;&#xd;&#xa;--Retorno de renovadora&#xd;&#xa;&#x28;&#xd;&#xa;select &#xd;&#xa;  8042 as cod_ite,&#xd;&#xa;  t_ret_ren.dt_ret_ren as dat_saida,&#xd;&#xa;  1 as qtd_saida,&#xd;&#xa;  t_ret_ren_pne.vl_ren_pne as val_ite,&#xd;&#xa;  t_ret_ren.cd_pnt_apo as pt_apoio,&#xd;&#xa;  30000 as car_cod,&#xd;&#xa;  0 as centroCusto,&#xd;&#xa;  0 as km_dia&#xd;&#xa;from t_ret_ren_pne inner join t_ret_ren on t_ret_ren_pne.cd_ret_ren &#x3d; t_ret_ren.cd_ret_ren&#xd;&#xa;union all&#xd;&#xa;select &#xd;&#xa;  8042 as cod_ite,&#xd;&#xa;  t_ret_ren.dt_ret_ren as dat_saida,&#xd;&#xa;  t_ite_ret_ren.qt_ite as qtd_saida,&#xd;&#xa;  t_ite_ret_ren.vl_cus_ite as val_ite,&#xd;&#xa;  t_ite_ret_ren.cd_pnt_apo as pt_apoio,&#xd;&#xa;  30000 as car_cod,&#xd;&#xa;  0 as centroCusto,&#xd;&#xa;  0 as km_dia&#xd;&#xa;from t_ret_ren inner join t_ite_ret_ren on &#x28;t_ret_ren.cd_ret_ren &#x3d; t_ite_ret_ren.cd_ret_ren&#x29;&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;union all&#xd;&#xa;&#xd;&#xa;-- Itens para recondicionamento&#xd;&#xa;&#x28;&#xd;&#xa;select&#xd;&#xa;	cd_ite as cod_ite,&#xd;&#xa;	dt_req as dat_saida,&#xd;&#xa;	qt_ite as qtd_saida,&#xd;&#xa;	&#x28;select top 1&#xd;&#xa;     t_cus_ite_dia.vl_cnt&#xd;&#xa;     from t_cus_ite_dia&#xd;&#xa;     where t_cus_ite_dia.dt_mov &#x3c;&#x3d; t_ite_rec.dt_req and t_cus_ite_dia.cd_ite &#x3d; t_ite_rec.cd_ite&#xd;&#xa;     order by t_cus_ite_dia.dt_mov desc&#xd;&#xa;     &#x29;  as val_ite,&#xd;&#xa;	cd_pnt_apo as pt_apoio,&#xd;&#xa;	null as car_cod,&#xd;&#xa;	0 as centroCusto,&#xd;&#xa;	0 as km_dia&#xd;&#xa;from t_ite_rec&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;union all&#xd;&#xa;&#xd;&#xa;--SCRIPT ABASTECIMENTO&#xd;&#xa;&#x28;&#xd;&#xa;SELECT&#xd;&#xa;	  1602 as cod_ite&#xd;&#xa;	, T_ABS_BVE.DT_ABS_BVE as dat_saida&#xd;&#xa;	, T_ABS_BVE.QT_ABS_BVE as qdt_saida&#xd;&#xa;	,&#x28;select top 1&#xd;&#xa;     t_cus_ite_dia.vl_cnt&#xd;&#xa;     from t_cus_ite_dia&#xd;&#xa;     where t_cus_ite_dia.dt_mov &#x3c;&#x3d; T_ABS_BVE.DT_ABS_BVE and t_cus_ite_dia.cd_ite &#x3d; 1602&#xd;&#xa;     order by t_cus_ite_dia.dt_mov desc&#xd;&#xa;     &#x29;  as val_ite&#xd;&#xa;	, 1 as pt_apoio&#xd;&#xa;	, t_vei.numero as car_cod&#xd;&#xa;	,0 as centroCusto&#xd;&#xa;	, &#x28;qt_abs_bve_km-qt_abs_bve_km_ant&#x29; as km_dia&#xd;&#xa;&#xd;&#xa;FROM T_ABS_BVE&#xd;&#xa;join t_vei on &#x28;t_vei.nr_vei&#x3d;t_abs_bve.nr_vei&#x29;&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;union all&#xd;&#xa;&#xd;&#xa;&#x28;&#xd;&#xa;SELECT&#xd;&#xa;   T_ITE_AJT.CD_ITE AS COD_ITE -- Consulta de itens ajustados&#xd;&#xa;  ,T_AJT.DT_AJT AS DAT_SAIDA&#xd;&#xa;  ,T_ITE_AJT.QT_ITE_AJT AS QTD_SAIDA&#xd;&#xa;  ,&#x28;select top 1 --SUB SELECT PARA CONSIDERAR VALOR CONT&#xc1;BIL DE SAIDA DO ITEM NA DATA DA MVMT.&#xd;&#xa;     t_cus_ite_dia.vl_cnt&#xd;&#xa;     from t_cus_ite_dia&#xd;&#xa;     where t_cus_ite_dia.dt_mov &#x3c;&#x3d; T_AJT.DT_AJT and t_cus_ite_dia.cd_ite &#x3d; T_ITE_AJT.CD_ITE&#xd;&#xa;     order by t_cus_ite_dia.dt_mov desc&#xd;&#xa;     &#x29;  as val_ite&#xd;&#xa;  , 1 AS PT_APOIO&#xd;&#xa;  , NULL AS CAR_COD&#xd;&#xa;  ,0 as centroCusto&#xd;&#xa;  , 0 AS KM_DIA&#xd;&#xa;FROM T_ITE_AJT --TABELA DE ITENS AJUSTADOS&#x28;INCREMENTADOS OU DECREMENTADOS&#x29;&#xd;&#xa;INNER JOIN T_AJT ON &#x28;T_ITE_AJT.CD_AJT &#x3d; T_AJT.CD_AJT&#x29;&#xd;&#xa;WHERE T_ITE_AJT.FL_OPR &#x3d; 1&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;union all &#xd;&#xa;&#xd;&#xa;&#x28;&#xd;&#xa;SELECT &#xd;&#xa;  1602 as cod_ite -- c&#xf3;digo do diesel. &#xda;nico c&#xf3;digo at&#xe9; ent&#xe3;o.&#xd;&#xa; ,T_ABS_BVE.DT_ABS_BVE as dat_saida --Data do abastecimento &#xd;&#xa; ,T_ABS_AVL.QT_DIF  as qtd_saida --Quantidade &#xd;&#xa; ,&#x28;select top 1 --SUB SELECT PARA CONSIDERAR VALOR CONT&#xc1;BIL DE SAIDA DO ITEM NA DATA DA MVMT.&#xd;&#xa;     t_cus_ite_dia.vl_cnt&#xd;&#xa;     from t_cus_ite_dia&#xd;&#xa;     where t_cus_ite_dia.dt_mov &#x3c;&#x3d; T_ABS_BVE.DT_ABS_BVE and t_cus_ite_dia.cd_ite &#x3d; 1602&#xd;&#xa;     order by t_cus_ite_dia.dt_mov desc&#xd;&#xa;     &#x29;  as val_ite&#xd;&#xa; , 1 as pt_apoio&#xd;&#xa; , null as car_cod&#xd;&#xa; ,0 as centroCusto&#xd;&#xa; , 0 as km_dia --Coluna para concatenar a km mensal &#xd;&#xa;FROM T_ABS_AVL&#xd;&#xa;JOIN T_ABS_BVE ON &#x28;T_ABS_AVL.CD_ABS&#x3d;T_ABS_BVE.CD_ABS&#x29;&#xd;&#xa;GROUP BY T_ABS_BVE.CD_ABS , T_ABS_AVL.QT_DIF, T_ABS_BVE.DT_ABS_BVE&#xd;&#xa;&#x29;&#xd;&#xa;union all&#xd;&#xa;&#x28;&#xd;&#xa;&#x28;&#xd;&#xa;SELECT&#xd;&#xa;    &#x28;T_VEI.CD_CRT_CST &#x2a; -1&#x29; AS COD_ITE,&#xd;&#xa;    T_SER_TER.DT_SER_TER as dat_saida,&#xd;&#xa;    T_SER_TER_SER.QT_SER as qtd_saida,&#xd;&#xa;    &#x28;T_SER_TER_SER.VL_CUS_SER&#x2f;T_SER_TER_SER.QT_SER&#x29; as val_ite,&#xd;&#xa;    T_SER_TER_SER.CD_PNT_APO as pt_apoio,&#xd;&#xa;    T_VEI.NUMERO as car_cod,&#xd;&#xa;	0 as centroCusto,&#xd;&#xa;    0 as km_dia&#xd;&#xa;&#xd;&#xa;FROM T_SER_TER&#xd;&#xa;&#xd;&#xa;JOIN T_SER_TER_SER ON &#x28; T_SER_TER.CD_SER_TER &#x3d; T_SER_TER_SER.CD_SER_TER &#x29;&#xd;&#xa;JOIN T_VEI ON &#x28; T_SER_TER_SER.NR_VEI &#x3d; T_VEI.NR_VEI &#x29;&#xd;&#xa;where &#x28;T_SER_TER_SER.CD_PNT_APO&#x21;&#x3d;2&#x29;&#xd;&#xa;&#x29;&#xd;&#xa;UNION ALL&#xd;&#xa;&#x28;&#xd;&#xa;SELECT&#xd;&#xa;    &#x28;T_SER_TER_SER_CST.cd_crt_cst &#x2a; -1&#x29; AS COD_ITE,&#xd;&#xa;    T_SER_TER.DT_SER_TER AS dat_saida,&#xd;&#xa;    T_SER_TER_SER_CST.QT_SER AS qtd_saida,  &#xd;&#xa;    &#x28;T_SER_TER_SER_CST.VL_CUS_SER&#x2f;T_SER_TER_SER_CST.QT_SER&#x29; as val_ite,&#xd;&#xa;    T_SER_TER.cd_pnt_apo as pt_apoio,&#xd;&#xa;    &#x28;T_SER_TER_SER_CST.cd_crt_cst &#x2a; -1&#x29; as car_cod,&#xd;&#xa;	0 as centroCusto,  &#xd;&#xa;    0 as km_dia&#xd;&#xa;&#xd;&#xa;FROM T_SER_TER_SER_CST&#xd;&#xa;&#xd;&#xa;join T_SER_TER ON &#x28;T_SER_TER_SER_CST.CD_SER_TER&#x3d;T_SER_TER.CD_SER_TER&#x29;&#xd;&#xa;where &#x28;T_SER_TER.cd_pnt_apo&#x21;&#x3d;2&#x29;&#xd;&#xa;&#x29;&#xd;&#xa;&#x29;&#xd;&#xa;order by 2 desc</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>66</xloc>
+      <yloc>98</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Datawarehouse</connection>
+    <schema/>
+    <table>fato_fortes</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>qtd_saida</column_name>
+          <stream_name>qtd_saida</stream_name>
+        </field>
+        <field>
+          <column_name>val_ite</column_name>
+          <stream_name>val_ite</stream_name>
+        </field>
+        <field>
+          <column_name>km_dia</column_name>
+          <stream_name>km_dia</stream_name>
+        </field>
+        <field>
+          <column_name>sk_car</column_name>
+          <stream_name>sk_car</stream_name>
+        </field>
+        <field>
+          <column_name>sk_ite</column_name>
+          <stream_name>sk_ite</stream_name>
+        </field>
+        <field>
+          <column_name>sk_tmp</column_name>
+          <stream_name>sk_tmp</stream_name>
+        </field>
+        <field>
+          <column_name>valor_total</column_name>
+          <stream_name>valor_total</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>432</xloc>
+      <yloc>349</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Value Mapper</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <field_to_use>DIRCUSTO</field_to_use>
+    <target_field/>
+    <non_match_default/>
+    <fields>
+      <field>
+        <source_value>0</source_value>
+        <target_value>-13</target_value>
+      </field>
+      <field>
+        <source_value>13</source_value>
+        <target_value>-13</target_value>
+      </field>
+      <field>
+        <source_value>1</source_value>
+        <target_value>-1</target_value>
+      </field>
+      <field>
+        <source_value>3</source_value>
+        <target_value>-3</target_value>
+      </field>
+      <field>
+        <source_value>5</source_value>
+        <target_value>-5</target_value>
+      </field>
+      <field>
+        <source_value>7</source_value>
+        <target_value>-7</target_value>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>579</xloc>
+      <yloc>89</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>busca carro</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Datawarehouse</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>dim_veiculos</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>DIRCUSTO</name>
+        <field>car_num</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>fk_car</name>
+        <rename>sk_car</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>791</xloc>
+      <yloc>89</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>busca data</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Datawarehouse</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>dim_tempo</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>data</name>
+        <field>tmp_dta</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>fk_tmp</name>
+        <rename>sk_tmp</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>793</xloc>
+      <yloc>182</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>busca pe&#xe7;a</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Datawarehouse</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>dim_pecas</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>cod_ite</name>
+        <field>ite_cod</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>fk_ite</name>
+        <rename>sk_ite</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>896</xloc>
+      <yloc>89</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>calcula valor total</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>valor_total</field_name>
+<calc_type>MULTIPLY</calc_type>
+<field_a>val_ite</field_a>
+<field_b>qtd_saida</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask>0.0000</conversion_mask>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>678</xloc>
+      <yloc>183</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>filtra datas</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>sk_tmp</leftvalue>
+   <function>&#x3e;&#x3d;</function>
+   <rightvalue/>
+   <value><name>constant</name><type>Integer</type><text>1</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;</mask></value>   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>433</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>remove hh&#x3a;mm da data</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>data</field_name>
+<calc_type>REMOVE_TIME_FROM_DATE</calc_type>
+<field_a>dat_saida</field_a>
+<field_b/>
+<field_c/>
+<value_type>Date</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>895</xloc>
+      <yloc>182</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>remove matex</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>pt_apoio</leftvalue>
+ <function>&#x3c;&#x3e;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>Integer</type><text>4</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>675</xloc>
+      <yloc>92</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
