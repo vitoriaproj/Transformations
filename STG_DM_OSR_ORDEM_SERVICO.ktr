@@ -68,7 +68,7 @@
   <created_user>-</created_user>
   <created_date>2015&#x2f;03&#x2f;17 14&#x3a;40&#x3a;47.456</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2015&#x2f;03&#x2f;18 17&#x3a;03&#x3a;10.428</modified_date>
+  <modified_date>2015&#x2f;03&#x2f;26 10&#x3a;26&#x3a;23.590</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -221,7 +221,7 @@
   <hop> <from>CALC&#x27;S</from><to>INS. JAVASCRIPT</to><enabled>Y</enabled> </hop>
   <hop> <from>INS. JAVASCRIPT</from><to>SEQUENCE</to><enabled>Y</enabled> </hop>
   <hop> <from>SEQUENCE</from><to>FILTER &#x3e; 0</to><enabled>Y</enabled> </hop>
-  <hop> <from>FILTER &#x3e; 0</from><to>ERROS</to><enabled>Y</enabled> </hop>
+  <hop> <from>FILTER &#x3e; 0</from><to>ERROR</to><enabled>Y</enabled> </hop>
   <hop> <from>FILTER &#x3e; 0</from><to>METADATA</to><enabled>Y</enabled> </hop>
   <hop> <from>METADATA</from><to>CALC&#x27;S 2</to><enabled>Y</enabled> </hop>
   <hop> <from>CALC&#x27;S 2</from><to>SELECT</to><enabled>Y</enabled> </hop>
@@ -421,7 +421,7 @@
     </step>
 
   <step>
-    <name>ERROS</name>
+    <name>ERROR</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
@@ -451,7 +451,7 @@
            <schema_name/>
            </partitioning>
 <send_true_to>METADATA</send_true_to>
-<send_false_to>ERROS</send_false_to>
+<send_false_to>ERROR</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
@@ -547,6 +547,41 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>605</xloc>
       <yloc>165</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>METADATA2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>STG_OSR_MEC</name>
+        <rename>STG_OSR_MEC</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>867</xloc>
+      <yloc>114</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -708,41 +743,6 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>962</xloc>
       <yloc>161</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>METADATA2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>        <select_unspecified>N</select_unspecified>
-      <meta>        <name>STG_OSR_MEC</name>
-        <rename>STG_OSR_MEC</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>&#x23;</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>867</xloc>
-      <yloc>114</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
