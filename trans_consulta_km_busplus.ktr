@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
     <name>trans_consulta_km_busplus</name>
@@ -277,14 +278,14 @@
    <leftvalue>ESC_DAT</leftvalue>
    <function>&#x3e;&#x3d;</function>
    <rightvalue/>
-   <value><name>constant</name><type>Date</type><text>2015&#x2f;01&#x2f;01 00&#x3a;00&#x3a;00.000</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask>yyyy&#x2f;MM&#x2f;dd</mask></value>   </condition>
+   <value><name>constant</name><type>Date</type><text>2015&#x2f;03&#x2f;01 00&#x3a;00&#x3a;00.000</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask>yyyy&#x2f;MM&#x2f;dd</mask></value>   </condition>
   <condition>
    <negated>N</negated>
    <operator>AND</operator>
    <leftvalue>ESC_DAT</leftvalue>
    <function>&#x3c;&#x3d;</function>
    <rightvalue/>
-   <value><name>constant</name><type>Date</type><text>2015&#x2f;01&#x2f;31 00&#x3a;00&#x3a;00.000</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask>yyyy&#x2f;MM&#x2f;dd</mask></value>   </condition>
+   <value><name>constant</name><type>Date</type><text>2015&#x2f;03&#x2f;31 00&#x3a;00&#x3a;00.000</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask>yyyy&#x2f;MM&#x2f;dd</mask></value>   </condition>
   <condition>
    <negated>N</negated>
    <operator>AND</operator>
