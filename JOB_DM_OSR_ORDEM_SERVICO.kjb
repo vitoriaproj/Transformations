@@ -204,7 +204,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x5c;&#x5c;pentaho&#x5c;Compartilhamento&#x5c;transformations&#x5c;STG_DM_OSR_EXPEDIENTE.ktr</filename>
+      <filename>F&#x3a;&#x5c;Arquivos&#x5c;Manuten&#xe7;&#xe3;o&#x5c;Arquivos de Manuten&#xe7;&#xe3;o&#x5c;BI&#x5c;Dados Manuten&#xe7;&#xe3;o&#x5c;transformations&#x5c;STG_DM_OSR_EXPEDIENTE.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -229,7 +229,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>241</xloc>
-      <yloc>61</yloc>
+      <yloc>60</yloc>
       </entry>
     <entry>
       <name>STG_DM_OSR_HORA_EXTRA</name>
@@ -237,7 +237,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x5c;&#x5c;pentaho&#x5c;Compartilhamento&#x5c;transformations&#x5c;STG_DM_OSR_HORA_EXTRA.ktr</filename>
+      <filename>F&#x3a;&#x5c;Arquivos&#x5c;Manuten&#xe7;&#xe3;o&#x5c;Arquivos de Manuten&#xe7;&#xe3;o&#x5c;BI&#x5c;Dados Manuten&#xe7;&#xe3;o&#x5c;transformations&#x5c;STG_DM_OSR_HORA_EXTRA.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -270,7 +270,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x5c;&#x5c;pentaho&#x5c;Compartilhamento&#x5c;transformations&#x5c;STG_DM_OSR_IMPEDIMENTO.ktr</filename>
+      <filename>F&#x3a;&#x5c;Arquivos&#x5c;Manuten&#xe7;&#xe3;o&#x5c;Arquivos de Manuten&#xe7;&#xe3;o&#x5c;BI&#x5c;Dados Manuten&#xe7;&#xe3;o&#x5c;transformations&#x5c;STG_DM_OSR_IMPEDIMENTO.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -303,7 +303,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x5c;&#x5c;pentaho&#x5c;Compartilhamento&#x5c;transformations&#x5c;STG_DM_OSR_ORDEM_SERVICO.ktr</filename>
+      <filename>F&#x3a;&#x5c;Arquivos&#x5c;Manuten&#xe7;&#xe3;o&#x5c;Arquivos de Manuten&#xe7;&#xe3;o&#x5c;BI&#x5c;Dados Manuten&#xe7;&#xe3;o&#x5c;transformations&#x5c;STG_DM_OSR_ORDEM_SERVICO.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -336,7 +336,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x5c;&#x5c;pentaho&#x5c;Compartilhamento&#x5c;transformations&#x5c;FCT_DM_OSR_ORDEM_SERVICO.ktr</filename>
+      <filename>F&#x3a;&#x5c;Arquivos&#x5c;Manuten&#xe7;&#xe3;o&#x5c;Arquivos de Manuten&#xe7;&#xe3;o&#x5c;BI&#x5c;Dados Manuten&#xe7;&#xe3;o&#x5c;transformations&#x5c;FCT_DM_OSR_ORDEM_SERVICO.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>

@@ -250,8 +250,8 @@
 </calculation>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>215</xloc>
-      <yloc>158</yloc>
+      <xloc>222</xloc>
+      <yloc>109</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -278,14 +278,14 @@
    <leftvalue>ESC_DAT</leftvalue>
    <function>&#x3e;&#x3d;</function>
    <rightvalue/>
-   <value><name>constant</name><type>Date</type><text>2015&#x2f;03&#x2f;01 00&#x3a;00&#x3a;00.000</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask>yyyy&#x2f;MM&#x2f;dd</mask></value>   </condition>
+   <value><name>constant</name><type>Date</type><text>2015&#x2f;04&#x2f;01 00&#x3a;00&#x3a;00.000</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask>yyyy&#x2f;MM&#x2f;dd</mask></value>   </condition>
   <condition>
    <negated>N</negated>
    <operator>AND</operator>
    <leftvalue>ESC_DAT</leftvalue>
    <function>&#x3c;&#x3d;</function>
    <rightvalue/>
-   <value><name>constant</name><type>Date</type><text>2015&#x2f;03&#x2f;31 00&#x3a;00&#x3a;00.000</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask>yyyy&#x2f;MM&#x2f;dd</mask></value>   </condition>
+   <value><name>constant</name><type>Date</type><text>2015&#x2f;04&#x2f;30 00&#x3a;00&#x3a;00.000</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask>yyyy&#x2f;MM&#x2f;dd</mask></value>   </condition>
   <condition>
    <negated>N</negated>
    <operator>AND</operator>
@@ -305,8 +305,8 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>361</xloc>
-      <yloc>152</yloc>
+      <xloc>368</xloc>
+      <yloc>109</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -328,7 +328,7 @@
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>&#x5c;&#x5c;pentaho&#x5c;Compartilhamento&#x5c;arquivos diversos&#x5c;ESC_PES.xls</name>
+      <name>F&#x3a;&#x5c;Arquivos&#x5c;Manuten&#xe7;&#xe3;o&#x5c;Arquivos de Manuten&#xe7;&#xe3;o&#x5c;BI&#x5c;Dados Manuten&#xe7;&#xe3;o&#x5c;Productivity Maintenance&#x5c;xls&#x5c;ESC_PES.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -372,8 +372,8 @@
       </custom>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>702</xloc>
-      <yloc>152</yloc>
+      <xloc>709</xloc>
+      <yloc>109</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -428,8 +428,8 @@
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>511</xloc>
-      <yloc>151</yloc>
+      <xloc>518</xloc>
+      <yloc>109</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -457,8 +457,8 @@
     <accept_stepname/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>84</xloc>
-      <yloc>153</yloc>
+      <xloc>90</xloc>
+      <yloc>109</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

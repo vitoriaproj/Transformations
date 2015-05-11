@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>trans_pag_diversos</name>
+    <name>TRANS_TMP</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
     </parameters>
@@ -67,9 +66,9 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2014&#x2f;09&#x2f;16 15&#x3a;52&#x3a;14.862</created_date>
+  <created_date>2015&#x2f;04&#x2f;08 16&#x3a;32&#x3a;46.841</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2015&#x2f;03&#x2f;03 12&#x3a;31&#x3a;08.642</modified_date>
+  <modified_date>2015&#x2f;04&#x2f;08 16&#x3a;32&#x3a;46.841</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -218,12 +217,14 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Microsoft Excel Input</from><to>Calculator</to><enabled>Y</enabled> </hop>
-  <hop> <from>Calculator</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Table input</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Filter rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>Microsoft Excel Output</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>Calculator</name>
-    <type>Calculator</type>
+    <name>Table input</name>
+    <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -232,45 +233,112 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-       <calculation><field_name>ano</field_name>
-<calc_type>YEAR_OF_DATE</calc_type>
-<field_a>Data</field_a>
-<field_b/>
-<field_c/>
-<value_type>Integer</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-       <calculation><field_name>mes</field_name>
-<calc_type>MONTH_OF_DATE</calc_type>
-<field_a>Data</field_a>
-<field_b/>
-<field_c/>
-<value_type>Integer</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
+    <connection>mafro</connection>
+    <sql>SELECT&#xd;&#xa;  VEI_COD&#xd;&#xa;, FIL_COD&#xd;&#xa;, VEI_PLA&#xd;&#xa;, VEI_MAR&#xd;&#xa;, VEI_TIP&#xd;&#xa;, MVE_COD&#xd;&#xa;, TFR_COD&#xd;&#xa;, VEI_CHA&#xd;&#xa;, VEI_POT&#xd;&#xa;, VEI_FAB&#xd;&#xa;, VEI_ODO&#xd;&#xa;, CAR_COD&#xd;&#xa;, VEI_CAR&#xd;&#xa;, VEI_CAR_MES&#xd;&#xa;, VEI_CAR_MTS&#xd;&#xa;, VEI_CAR_MOD&#xd;&#xa;, VEI_CAR_FAB&#xd;&#xa;, VEI_LOT_EPE&#xd;&#xa;, VEI_LOT_SEN&#xd;&#xa;, VEI_CAR_ARE&#xd;&#xa;, VEI_CAR_MAR&#xd;&#xa;, VEI_CAR_DTA&#xd;&#xa;, VEI_CAR_NUM&#xd;&#xa;, VEI_AQU&#xd;&#xa;, VEI_AQU_DTA&#xd;&#xa;, VEI_LIC&#xd;&#xa;, VEI_LIC_DTA&#xd;&#xa;, VEI_VIS_DTA&#xd;&#xa;, VEI_PGS_DTA&#xd;&#xa;, VEI_REN&#xd;&#xa;, VEI_ALI_CHA&#xd;&#xa;, VEI_ALI_CAR&#xd;&#xa;, VEI_COR&#xd;&#xa;, VEI_QTD_EIX&#xd;&#xa;, PMN_COD&#xd;&#xa;, VEI_NUM_REV&#xd;&#xa;, VEI_ODO_URV&#xd;&#xa;, VEI_TPO_ABA&#xd;&#xa;, VEI_STA&#xd;&#xa;, VEI_FRQ_MOT&#xd;&#xa;, VEI_FRQ_CXM&#xd;&#xa;, VEI_FRQ_DIF&#xd;&#xa;, VEI_KMS_PER&#xd;&#xa;, VEI_PAR_TRA&#xd;&#xa;, VEI_COR_JAN&#xd;&#xa;, VEI_CAD_TPO&#xd;&#xa;, VEI_BAG&#xd;&#xa;, VEI_CAD_DUP&#xd;&#xa;, VEI_CAD_IND&#xd;&#xa;, VEI_CAD_COR&#xd;&#xa;, VEI_TPO_CAD&#xd;&#xa;, VEI_MAN_COR&#xd;&#xa;, VEI_MAN_PRV&#xd;&#xa;, VEI_MAN_PRE&#xd;&#xa;, VEI_DTA_DES&#xd;&#xa;, VEI_CHA_MOD&#xd;&#xa;, VEI_TIP_OLEM&#xd;&#xa;, VEI_TIP_OLEC&#xd;&#xa;, VEI_TIP_OLED&#xd;&#xa;, VEI_TIP_OLET&#xd;&#xa;FROM TAB_VEI&#xd;&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>348</xloc>
-      <yloc>112</yloc>
+      <xloc>115</xloc>
+      <yloc>123</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Microsoft Excel Input</name>
-    <type>ExcelInput</type>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>VEI_COD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>VEI_TIP</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>VEI_CHA</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>VEI_FAB</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>VEI_DTA_DES</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>239</xloc>
+      <yloc>118</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Microsoft Excel Output</send_true_to>
+<send_false_to>Dummy &#x28;do nothing&#x29;</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>VEI_DTA_DES</leftvalue>
+ <function>IS NULL</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>369</xloc>
+      <yloc>121</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Dummy &#x28;do nothing&#x29;</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>463</xloc>
+      <yloc>48</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Microsoft Excel Output</name>
+    <type>ExcelOutput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -280,216 +348,77 @@
            <schema_name/>
            </partitioning>
     <header>Y</header>
-    <noempty>Y</noempty>
-    <stoponempty>N</stoponempty>
-    <filefield/>
-    <sheetfield/>
-    <sheetrownumfield/>
-    <rownumfield/>
-    <sheetfield/>
-    <filefield/>
-    <limit>0</limit>
+    <footer>N</footer>
     <encoding/>
+    <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
-    <accept_filenames>N</accept_filenames>
-    <accept_field/>
-    <accept_stepname/>
     <file>
-      <name>F&#x3a;&#x5c;Arquivos&#x5c;Manuten&#xe7;&#xe3;o&#x5c;Arquivos de Manuten&#xe7;&#xe3;o&#x5c;Suprimentos&#x5c;Pagam. Diversos para libre office 2014.xls</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
+      <name>C&#x3a;&#x5c;Users&#x5c;alexssandro&#x5c;Desktop&#x5c;REL_FROTA.xls</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+      </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
     <fields>
       <field>
-        <name>Data</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
+        <name>VEI_COD</name>
+        <type>Integer</type>
+        <format>&#x23;</format>
       </field>
       <field>
-        <name>Descri&#xe7;&#xe3;o</name>
+        <name>VEI_TIP</name>
         <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
         <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
-        <name>Nome</name>
+        <name>VEI_CHA</name>
         <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
         <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
-        <name>Valor</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>Qt&#x23;</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>Observa&#xe7;&#xe3;o</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>Vlr</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
+        <name>VEI_FAB</name>
+        <type>Integer</type>
+        <format>&#x23;</format>
       </field>
     </fields>
-    <sheets>
-      <sheet>
-        <name>Pagam.Diversos</name>
-        <startrow>14</startrow>
-        <startcol>0</startcol>
-        </sheet>
-    </sheets>
-    <strict_types>N</strict_types>
-    <error_ignored>N</error_ignored>
-    <error_line_skipped>N</error_line_skipped>
-    <bad_line_files_destination_directory/>
-    <bad_line_files_extension>warning</bad_line_files_extension>
-    <error_line_files_destination_directory/>
-    <error_line_files_extension>error</error_line_files_extension>
-    <line_number_files_destination_directory/>
-    <line_number_files_extension>line</line_number_files_extension>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <spreadsheet_type>JXL</spreadsheet_type>
+    <custom>
+    <header_font_name>arial</header_font_name>
+    <header_font_size>10</header_font_size>
+    <header_font_bold>N</header_font_bold>
+    <header_font_italic>N</header_font_italic>
+    <header_font_underline>no</header_font_underline>
+    <header_font_orientation>horizontal</header_font_orientation>
+    <header_font_color>black</header_font_color>
+    <header_background_color>none</header_background_color>
+    <header_row_height>255</header_row_height>
+    <header_alignment>left</header_alignment>
+    <header_image/>
+    <row_font_name>arial</row_font_name>
+    <row_font_size>10</row_font_size>
+    <row_font_color>black</row_font_color>
+    <row_background_color>none</row_background_color>
+      </custom>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>124</xloc>
-      <yloc>111</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Table output</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>Datawarehouse</connection>
-    <schema/>
-    <table>dim_pag_dv</table>
-    <commit>1000</commit>
-    <truncate>Y</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>N</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>Y</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>data</column_name>
-          <stream_name>Data</stream_name>
-        </field>
-        <field>
-          <column_name>nome</column_name>
-          <stream_name>Nome</stream_name>
-        </field>
-        <field>
-          <column_name>valor</column_name>
-          <stream_name>Valor</stream_name>
-        </field>
-        <field>
-          <column_name>vlr</column_name>
-          <stream_name>Vlr</stream_name>
-        </field>
-        <field>
-          <column_name>ano</column_name>
-          <stream_name>ano</stream_name>
-        </field>
-        <field>
-          <column_name>mes</column_name>
-          <stream_name>mes</stream_name>
-        </field>
-        <field>
-          <column_name>descricao</column_name>
-          <stream_name>Descri&#xe7;&#xe3;o</stream_name>
-        </field>
-        <field>
-          <column_name>qt</column_name>
-          <stream_name>Qt&#x23;</stream_name>
-        </field>
-        <field>
-          <column_name>obs</column_name>
-          <stream_name>Observa&#xe7;&#xe3;o</stream_name>
-        </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>594</xloc>
-      <yloc>107</yloc>
+      <xloc>472</xloc>
+      <yloc>179</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

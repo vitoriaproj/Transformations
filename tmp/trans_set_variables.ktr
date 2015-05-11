@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>trans_pag_diversos</name>
+    <name>trans_set_variables</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
     </parameters>
@@ -67,9 +66,9 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2014&#x2f;09&#x2f;16 15&#x3a;52&#x3a;14.862</created_date>
+  <created_date>2015&#x2f;04&#x2f;10 10&#x3a;48&#x3a;06.300</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2015&#x2f;03&#x2f;03 12&#x3a;31&#x3a;08.642</modified_date>
+  <modified_date>2015&#x2f;04&#x2f;10 10&#x3a;48&#x3a;06.300</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -218,12 +217,11 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Microsoft Excel Input</from><to>Calculator</to><enabled>Y</enabled> </hop>
-  <hop> <from>Calculator</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Generate Rows</from><to>Set Variables</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>Calculator</name>
-    <type>Calculator</type>
+    <name>Generate Rows</name>
+    <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -232,197 +230,36 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-       <calculation><field_name>ano</field_name>
-<calc_type>YEAR_OF_DATE</calc_type>
-<field_a>Data</field_a>
-<field_b/>
-<field_c/>
-<value_type>Integer</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-       <calculation><field_name>mes</field_name>
-<calc_type>MONTH_OF_DATE</calc_type>
-<field_a>Data</field_a>
-<field_b/>
-<field_c/>
-<value_type>Integer</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>348</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Microsoft Excel Input</name>
-    <type>ExcelInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <header>Y</header>
-    <noempty>Y</noempty>
-    <stoponempty>N</stoponempty>
-    <filefield/>
-    <sheetfield/>
-    <sheetrownumfield/>
-    <rownumfield/>
-    <sheetfield/>
-    <filefield/>
-    <limit>0</limit>
-    <encoding/>
-    <add_to_result_filenames>Y</add_to_result_filenames>
-    <accept_filenames>N</accept_filenames>
-    <accept_field/>
-    <accept_stepname/>
-    <file>
-      <name>F&#x3a;&#x5c;Arquivos&#x5c;Manuten&#xe7;&#xe3;o&#x5c;Arquivos de Manuten&#xe7;&#xe3;o&#x5c;Suprimentos&#x5c;Pagam. Diversos para libre office 2014.xls</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
     <fields>
       <field>
-        <name>Data</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
+        <name>TESTE</name>
+        <type>Integer</type>
+        <format>&#x23;</format>
         <currency/>
         <decimal/>
         <group/>
-      </field>
-      <field>
-        <name>Descri&#xe7;&#xe3;o</name>
-        <type>String</type>
+        <nullif>5</nullif>
         <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>Nome</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>Valor</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>Qt&#x23;</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>Observa&#xe7;&#xe3;o</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>Vlr</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
-    <sheets>
-      <sheet>
-        <name>Pagam.Diversos</name>
-        <startrow>14</startrow>
-        <startcol>0</startcol>
-        </sheet>
-    </sheets>
-    <strict_types>N</strict_types>
-    <error_ignored>N</error_ignored>
-    <error_line_skipped>N</error_line_skipped>
-    <bad_line_files_destination_directory/>
-    <bad_line_files_extension>warning</bad_line_files_extension>
-    <error_line_files_destination_directory/>
-    <error_line_files_extension>error</error_line_files_extension>
-    <line_number_files_destination_directory/>
-    <line_number_files_extension>line</line_number_files_extension>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <spreadsheet_type>JXL</spreadsheet_type>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>124</xloc>
-      <yloc>111</yloc>
+      <yloc>115</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Table output</name>
-    <type>TableOutput</type>
+    <name>Set Variables</name>
+    <type>SetVariable</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -431,65 +268,19 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>Datawarehouse</connection>
-    <schema/>
-    <table>dim_pag_dv</table>
-    <commit>1000</commit>
-    <truncate>Y</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>N</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>Y</return_keys>
-    <return_field/>
     <fields>
-        <field>
-          <column_name>data</column_name>
-          <stream_name>Data</stream_name>
+      <field>
+        <field_name>TESTE</field_name>
+        <variable_name>TESTE</variable_name>
+        <variable_type>ROOT_JOB</variable_type>
+        <default_value>0</default_value>
         </field>
-        <field>
-          <column_name>nome</column_name>
-          <stream_name>Nome</stream_name>
-        </field>
-        <field>
-          <column_name>valor</column_name>
-          <stream_name>Valor</stream_name>
-        </field>
-        <field>
-          <column_name>vlr</column_name>
-          <stream_name>Vlr</stream_name>
-        </field>
-        <field>
-          <column_name>ano</column_name>
-          <stream_name>ano</stream_name>
-        </field>
-        <field>
-          <column_name>mes</column_name>
-          <stream_name>mes</stream_name>
-        </field>
-        <field>
-          <column_name>descricao</column_name>
-          <stream_name>Descri&#xe7;&#xe3;o</stream_name>
-        </field>
-        <field>
-          <column_name>qt</column_name>
-          <stream_name>Qt&#x23;</stream_name>
-        </field>
-        <field>
-          <column_name>obs</column_name>
-          <stream_name>Observa&#xe7;&#xe3;o</stream_name>
-        </field>
-    </fields>
+      </fields>
+    <use_formatting>Y</use_formatting>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>594</xloc>
-      <yloc>107</yloc>
+      <xloc>289</xloc>
+      <yloc>114</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

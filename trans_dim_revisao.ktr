@@ -74,8 +74,8 @@
   <notepads>
     <notepad>
       <note>Revis&#xf5;es Cear&#xe1; diesel 1721 Euro&#xd;&#xa;15 , 45 e 75&#xd;&#xa;Revis&#xf5;es Cear&#xe1; diesel 1519 Euro&#xd;&#xa;15 , 60 e 105</note>
-      <xloc>766</xloc>
-      <yloc>11</yloc>
+      <xloc>927</xloc>
+      <yloc>240</yloc>
       <width>202</width>
       <heigth>70</heigth>
       <fontname>Arial</fontname>
@@ -95,14 +95,37 @@
     </notepad>
   </notepads>
   <connection>
+    <name>AgileBI</name>
+    <server>localhost</server>
+    <type>MONETDB</type>
+    <access>Native</access>
+    <database>pentaho-instaview</database>
+    <port>50000</port>
+    <username>monetdb</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb14a17edb86abd8</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <read_only>true</read_only>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_INFOBRIGHT.characterEncoding</code><attribute>UTF-8</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>50000</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
     <name>Datawarehouse</name>
-    <server>172.17.10.4</server>
+    <server>&#x24;&#x7b;datawarehouse&#x7d;</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>DataWarehouse</database>
-    <port>5432</port>
-    <username>bi_consulta</username>
-    <password>Encrypted 2be98afc86aa78281a50daf78d184a6ce</password>
+    <database>&#x24;&#x7b;database_dw&#x7d;</database>
+    <port>&#x24;&#x7b;porta_dw&#x7d;</port>
+    <username>&#x24;&#x7b;usuario_dw&#x7d;</username>
+    <password>&#x24;&#x7b;senha_dw&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -110,7 +133,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;porta_dw&#x7d;</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
@@ -120,13 +143,13 @@
   </connection>
   <connection>
     <name>frota</name>
-    <server>servitoriabd</server>
+    <server>&#x24;&#x7b;servitoriabd&#x7d;</server>
     <type>MSSQL</type>
     <access>Native</access>
-    <database>frota</database>
-    <port>1433</port>
-    <username>bi_consulta</username>
-    <password>Encrypted 2be98afc86aa78281a50daf78d184a6ce</password>
+    <database>&#x24;&#x7b;database_frota&#x7d;</database>
+    <port>&#x24;&#x7b;porta_frota&#x7d;</port>
+    <username>&#x24;&#x7b;usuario_frota&#x7d;</username>
+    <password>&#x24;&#x7b;senha_vitoria&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -135,7 +158,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;porta_frota&#x7d;</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
@@ -160,6 +183,30 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>3050</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>ordemservico</name>
+    <server>172.17.10.4</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>ordemservico</database>
+    <port>5432</port>
+    <username>bi_consulta</username>
+    <password>Encrypted 2be98afc86aa78281a50daf78d184a6ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
@@ -352,7 +399,7 @@
         <storage_type/>
       </meta>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1286</xloc>
+      <xloc>1272</xloc>
       <yloc>184</yloc>
       <draw>Y</draw>
       </GUI>
@@ -434,7 +481,7 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1385</xloc>
+      <xloc>1371</xloc>
       <yloc>362</yloc>
       <draw>Y</draw>
       </GUI>
@@ -481,7 +528,7 @@
 </calculation>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1384</xloc>
+      <xloc>1370</xloc>
       <yloc>134</yloc>
       <draw>Y</draw>
       </GUI>
@@ -507,7 +554,7 @@
 </formula>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1076</xloc>
+      <xloc>1062</xloc>
       <yloc>147</yloc>
       <draw>Y</draw>
       </GUI>
@@ -533,7 +580,7 @@
 </formula>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>941</xloc>
+      <xloc>927</xloc>
       <yloc>147</yloc>
       <draw>Y</draw>
       </GUI>
@@ -562,7 +609,7 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1186</xloc>
+      <xloc>1172</xloc>
       <yloc>146</yloc>
       <draw>Y</draw>
       </GUI>
@@ -988,7 +1035,7 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1283</xloc>
+      <xloc>1269</xloc>
       <yloc>67</yloc>
       <draw>Y</draw>
       </GUI>
@@ -1050,7 +1097,7 @@
       </remove>      <remove>        <name>REV_BA</name>
       </remove>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1383</xloc>
+      <xloc>1369</xloc>
       <yloc>259</yloc>
       <draw>Y</draw>
       </GUI>

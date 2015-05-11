@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2015&#x2f;02&#x2f;26 10&#x3a;08&#x3a;06.731</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2015&#x2f;03&#x2f;03 08&#x3a;06&#x3a;25.479</modified_date>
+  <modified_date>2015&#x2f;04&#x2f;09 14&#x3a;06&#x3a;47.190</modified_date>
     <parameters>
     </parameters>
   <connection>
@@ -203,7 +203,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x5c;&#x5c;pentaho&#x5c;Compartilhamento&#x5c;transformations&#x5c;trans_olapInput.ktr</filename>
+      <filename>F&#x3a;&#x5c;Arquivos&#x5c;Manuten&#xe7;&#xe3;o&#x5c;Arquivos de Manuten&#xe7;&#xe3;o&#x5c;BI&#x5c;Dados Manuten&#xe7;&#xe3;o&#x5c;transformations&#x5c;trans_olapInput.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -227,7 +227,7 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>238</xloc>
+      <xloc>236</xloc>
       <yloc>177</yloc>
       </entry>
     <entry>
@@ -236,7 +236,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x5c;&#x5c;pentaho&#x5c;Compartilhamento&#x5c;transformations&#x5c;start-pentaho.ktr</filename>
+      <filename>F&#x3a;&#x5c;Arquivos&#x5c;Manuten&#xe7;&#xe3;o&#x5c;Arquivos de Manuten&#xe7;&#xe3;o&#x5c;BI&#x5c;Dados Manuten&#xe7;&#xe3;o&#x5c;transformations&#x5c;start-pentaho.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>

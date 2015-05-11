@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
     <name>trans_olapInput</name>
@@ -217,7 +218,6 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>OLAP Input</from><to>Set Variables</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>OLAP Input</name>
@@ -231,37 +231,15 @@
            <schema_name/>
            </partitioning>
     <url>http&#x3a;&#x2f;&#x2f;172.17.10.16&#x3a;8080&#x2f;pentaho&#x2f;Xmla</url>
-    <username>alexssandro</username>
-    <password>Col3&#x3a;15</password>
-    <mdx>SELECT&#xd;&#xa;NON EMPTY &#x7b;Hierarchize&#x28;&#x7b;&#x5b;Measures&#x5d;.&#x5b;omissao&#x5d;&#x7d;&#x29;&#x7d; ON COLUMNS,&#xd;&#xa;NON EMPTY &#x7b;Hierarchize&#x28;&#x7b;&#x5b;tempo&#x5d;.&#x5b;2015&#x5d;.&#x5b;2&#x5d;&#x7d;&#x29;&#x7d; ON ROWS&#xd;&#xa;FROM &#x5b;socorroOmissao&#x5d;</mdx>
+    <username>&#x24;&#x7b;loginAdmin&#x7d;</username>
+    <password>&#x24;&#x7b;pwdAdmin&#x7d;</password>
+    <mdx>SELECT&#xd;&#xa;NON EMPTY &#x7b;Hierarchize&#x28;&#x7b;&#x5b;Measures&#x5d;.&#x5b;quantidade&#x5d;&#x7d;&#x29;&#x7d; ON COLUMNS,&#xd;&#xa;NON EMPTY &#x7b;Hierarchize&#x28;&#x7b;&#x5b;veiculo&#x5d;.&#x5b;All veiculos&#x5d;&#x7d;&#x29;&#x7d; ON ROWS&#xd;&#xa;FROM &#x5b;custos &#x5d;</mdx>
     <catalog>manutencao</catalog>
     <variables_active>N</variables_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>71</xloc>
-      <yloc>102</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Set Variables</name>
-    <type>SetVariable</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      </fields>
-    <use_formatting>Y</use_formatting>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>236</xloc>
-      <yloc>103</yloc>
+      <xloc>250</xloc>
+      <yloc>88</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
